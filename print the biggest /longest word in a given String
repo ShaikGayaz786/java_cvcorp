@@ -1,0 +1,31 @@
+3. Write a program to print the biggest / longest word in a given String? 
+
+
+import java.util.Arrays;
+
+public class Big_wod_in_str {
+	public static void main(String [] args)
+	{
+		
+		String a="java is ooooooooooa simple";
+		
+		
+		String d[]=a.split(" ");
+		//System.out.println(Arrays.toString(d));  here youcaan see the given String;
+		String lon="";
+		
+		for(int i=0;i<d.length;i++)
+		{
+			
+			if(d[i].length()>lon.length())	
+			{
+				lon=d[i];
+				
+			}
+		}
+		
+		System.out.print(lon);
+		
+	}
+
+}
