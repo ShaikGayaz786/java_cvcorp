@@ -1,0 +1,22 @@
+4. Write a Program to print the ASCII key values of a given String characters? 
+
+
+public class Ascii_vaalues_in_str_char {
+	
+	public static void main(String [] args)
+	{
+		
+		String a="hello world";
+		
+		int l=a.length();
+		
+		for(int i=0;i<l;i++)
+		{
+			char ch=a.charAt(i);
+			
+			int g=(int) ch;
+			System.out.print(g+" ");
+		}
+	}
+
+}
