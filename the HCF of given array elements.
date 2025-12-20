@@ -1,0 +1,36 @@
+
+the HCF of given array elements.
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+    int n[]={12,40,16,64};
+    int a=n.length,c=0,k=0;
+    
+    for(int i=n[0];i>=1;i--)
+    {
+        c=0;
+        int j;
+        for(j=0;j<a;j++)
+        {
+        
+            
+            if(n[j]%i==0)
+            {
+                c++;
+                //System.out.print(i);
+                
+            }
+        }
+        if(c==a)
+        {
+            k=i;
+            break;
+        }
+    }
+        
+        System.out.print(k);
+        
+	}
+}
