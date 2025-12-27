@@ -1,0 +1,51 @@
+//liner search
+
+
+import java.util.Scanner;
+class Main
+{
+public static void main(String []args)
+{
+    Scanner sc=new Scanner(System.in);
+
+    //Write your Code Here
+    int a=sc.nextInt();
+   
+    
+    
+    if(a<=0)
+    {
+        System.out.print("Invalid Array Size.");
+    }
+    else
+    {
+    int n[]=new int[a];
+    for(int i=0;i<a;i++)
+    {
+        n[i]=sc.nextInt();
+    }
+    int k=sc.nextInt();
+    int c=0;
+    
+    for(int i=0;i<a;i++)
+    {
+        if(k==n[i])
+        {
+            c++;
+        }
+        
+    }
+    //System.out.print(c);
+    if(c>=1)
+    {
+        System.out.print("Found");
+    }
+    else
+    {
+        System.out.print("Not Found");
+    }
+    }
+    
+
+}
+}
