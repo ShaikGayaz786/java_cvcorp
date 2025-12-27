@@ -1,0 +1,67 @@
+//Binary search 
+
+import java.util.Scanner;
+import java.util.Arrays;
+class Main
+{
+public static void main(String []args)
+{
+    Scanner sc=new Scanner(System.in);
+
+    //Write your Code Here
+    int a=sc.nextInt();
+    if(a<=0)
+    {
+        System.out.print("Invalid Array Size.");
+    }
+    else
+    {
+    int n[]=new int[a];
+    for(int i=0;i<a;i++)
+    {
+        n[i]=sc.nextInt();
+    }
+    int k=sc.nextInt();
+    int c=0;
+    
+    int min=Integer.MAX_VALUE;
+    
+    for(int i=0;i<a;i++)
+    {
+        for(int j=0;j<a-i-1;j++)
+        {
+            if(n[j]>n[j+1])
+            {
+                n[j]=n[j]+n[j+1]-(n[j+1]=n[j]);
+            }
+        }
+    }
+    int e=a-1;
+    while(c<=e)
+    { 
+        int mid=(c+e)/2;
+        //System.out.print(mid);
+        if(n[mid]==k)
+        {
+            System.out.print("Found");
+            break;
+        }
+        else if(k>n[mid])
+        {
+            c=mid+1;
+        }
+        else
+        {
+            e=mid-1;
+        }
+    }
+    if(c>e)
+    {
+        System.out.print("Not Found");
+    }
+    
+    }
+    
+
+}
+}
